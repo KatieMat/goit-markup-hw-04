@@ -78,6 +78,10 @@ img {
   color: var(--accentcolor);
 }
 
+.contacts:hover svg{
+  fill: var(--accentcolor);
+}
+
 .nav.current {
   color: var(--accentcolor);
 }
@@ -97,6 +101,7 @@ nav,
   display: flex;
   align-items: center;
 }
+
 
 .site-nav li:not(:last-child),
 .site-contacts li:not(:last-child) {
@@ -142,9 +147,10 @@ nav,
   text-decoration: none;
 }
 
-.site-contacts .contacts {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.site-contacts .contacts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contacts {
@@ -158,7 +164,13 @@ nav,
 
 /* studio */
 .hero-bg {
-  background-color: var(--background);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
+   url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -211,6 +223,27 @@ nav,
   margin-right: 30px;
 }
 
+.features-icon{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.list-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background: #F5F4FA;
+  border-radius: 4px;
+
+}
+
+
+.list-icon:not(:last-child){
+  margin-right: 30px;
+}
+
 .competences {
   margin-bottom: 10px;
 
@@ -260,6 +293,7 @@ nav,
   height: 428px;
   background: #ffffff;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card-name {
@@ -286,6 +320,7 @@ nav,
 .button-filter:focus {
   color: #ffffff;
   background-color: var(--accentcolor);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button {
@@ -309,6 +344,7 @@ nav,
   font-size: 16px;
   line-height: 1.625;
   text-align: center;
+  border: 0;
 }
 
 .portfolio {
@@ -329,6 +365,11 @@ nav,
 .container-bg {
   flex-basis: calc((100% - 90px) / 3);
 }
+
+.container-bg:hover{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .border {
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -370,7 +411,7 @@ nav,
 
 footer {
   background: var(--background);
-  padding-top: 60px;
+  /* padding-top: 60px; */
   padding-bottom: 60px;
 }
 
@@ -391,8 +432,17 @@ footer {
   margin-bottom: 9px;
 }
 
+.icon-item{
+  display: flex;
+justify-content: center;
+}
+
+.icon-item li:not(:last-child){
+  margin-right: 10px;
+}
+
 .icon {
-  display: inline-flex;
+  box-sizing: border-box;
   margin: 0;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -404,12 +454,8 @@ footer {
   fill: var(--subtext);
 }
 
-.icon:hover,
-.icon:focus {
-  fill: var(--accentcolor);
-}
 
-.button-icon {
+.link-icon {
 display: inline-flex;
 padding: 0;
 border: none;
@@ -417,20 +463,87 @@ width: 44px;
 height: 44px;
 border-radius: 50%;
 background-color: #fff;
-align-items: center;
 justify-content: center;
+align-items: center;
 }
 
 .site-icon {
   fill: #AFB1B8;
 }
 
-.button-icon:focus,
-.button-icon:hover{
+.link-icon:focus,
+.link-icon:hover{
   background-color: var(--accentcolor);
   
 }
-.site-icon:hover,
-.site-icon:focus {
+.link-icon:hover .site-icon,
+.link-icon:focus .site-icon {
   fill: #fff;
+}
+
+.client-list{
+  display: flex;
+}
+
+.client-icon{
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #AFB1B8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: #AFB1B8;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-icon:not(:last-child){
+  margin-right: 30px;
+}
+
+.client-icon:hover,
+.client-icon:focus{
+  fill: var(--accentcolor);
+  border-color: var(--accentcolor);
+}
+
+.joing-us{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.icon-footer{
+  display: inline-flex;
+
+}
+  
+.icon-footer li:not(:last-child){
+  margin-right: 10px;
+}
+
+.link-footer{
+  background-color:#FFFFFF10;
+}
+
+.link-footer svg{
+  fill: #FFFFFF;
+}
+
+.foot{
+  display: flex;
+}
+
+.joing{
+  margin-top: 75px;
+  margin-left: 70px;
+}
+
+.foot-address{
+  margin-top: 60px;
 }
