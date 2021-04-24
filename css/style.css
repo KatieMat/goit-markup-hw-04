@@ -78,6 +78,7 @@ img {
   color: var(--accentcolor);
 }
 
+.contacts:focus svg,
 .contacts:hover svg{
   fill: var(--accentcolor);
 }
@@ -485,7 +486,7 @@ align-items: center;
   display: flex;
 }
 
-.client-icon{
+.client-icon a{
   display: inline-flex;
   width: 170px;
   height: 92px;
@@ -499,12 +500,13 @@ align-items: center;
   align-items: center;
 }
 
+
 .client-icon:not(:last-child){
   margin-right: 30px;
 }
 
-.client-icon:hover,
-.client-icon:focus{
+.client-icon a:hover,
+.client-icon a:focus{
   fill: var(--accentcolor);
   border-color: var(--accentcolor);
 }
