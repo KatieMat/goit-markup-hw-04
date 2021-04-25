@@ -282,7 +282,6 @@ nav,
 
 .team {
   display: flex;
-  padding-bottom: 30px;
 }
 
 .team .item:not(:last-child) {
